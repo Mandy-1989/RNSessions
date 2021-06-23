@@ -3,11 +3,11 @@ import apisauce from 'apisauce';
 import {APIEndpoints} from './ApiEndPoints';
 
 import {NETWORK_ERROR_MSG} from '../utils/AppUtils';
-import {BASE_URL} from './ApiRouters';
-
+//import {BASE_URL} from './ApiRouters';
+import Config from 'react-native-config';
 // our "constructor"
 
-const create = (baseURL: string = BASE_URL) => {
+const create = (baseURL: string = Config.BASE_URL) => {
   // ------
   // STEP 1
   // ------
