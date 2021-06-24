@@ -2,7 +2,7 @@
  * @format
  */
 import {AppRegistry, YellowBox} from 'react-native';
-import './src/config/ReactotronConfig';
+import './src/config/reactotronconfig';
 import {App} from './src/screens';
 import {name as appName} from './app.json';
 console.disableYellowBox = true; // For avoid waring
