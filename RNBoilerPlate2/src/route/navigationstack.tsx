@@ -1,9 +1,17 @@
 import React from 'react';
+import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {navigationRef} from './navigationservice';
 
-import {Setting, Signup, ForgotPassword, Login, Lunch} from '../screens';
+import {
+  Setting,
+  Signup,
+  ForgotPassword,
+  Login,
+  Lunch,
+  Notification,
+} from '../screens';
 import {DrawerStack} from './drawerstack';
 
 const Stack = createStackNavigator();
@@ -28,6 +36,7 @@ const SignedInStack = props => {
       screenOptions={{headerShown: false}}>
       <Stack.Screen name="DrawerStack" component={DrawerStack} />
       <Stack.Screen name="Setting" component={Setting} />
+      <Stack.Screen name="Notification" component={Notification} />
     </LoggedInStack.Navigator>
   );
 };

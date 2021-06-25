@@ -11,3 +11,4 @@ export const ONLY_NUMBER_REGEX = /^[0-9]+$/;
 export const NAME_REGEX = /^[a-zA-Z].[\s\.]$/g;
 export const FULL_NAME_REGEX = /^[a-zA-Z](?:[ '’.\-a-zA-Z]*[a-zA-Z])?$/;
 export const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/;
+export const SUPPORTED_OPRATIONS = ['portrait', 'landscape'];
