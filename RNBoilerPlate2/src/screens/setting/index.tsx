@@ -13,8 +13,7 @@ interface IProps {
 export const Setting: React.FC<IProps> = props => {
   const goBack = () => NavigationService.goBack();
   return (
-    <View style={{flex: 1}}>
-      <MyStatusBar backgroundColor={Colors.green} />
+    <SafeAreaView style={styles.safeAreaContainer}>
       <View style={styles.container}>
         <Headers
           title={I18n.t('setting.title')}
@@ -28,6 +27,7 @@ export const Setting: React.FC<IProps> = props => {
           {'This is Setting screen!'}
         </Text>
       </View>
-    </View>
+      <SafeAreaView style={styles.safeAreaBottomeContainer} />
+    </SafeAreaView>
   );
 };

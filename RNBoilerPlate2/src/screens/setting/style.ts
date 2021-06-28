@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   },
   safeAreaContainer: {
     flex: 1,
-    backgroundColor: Colors.red,
+    backgroundColor: Colors.green,
   },
   safeAreaBottomeContainer: {
     flex: 0,
