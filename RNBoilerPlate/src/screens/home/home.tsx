@@ -1,12 +1,19 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {View, SafeAreaView, FlatList, ActivityIndicator} from 'react-native';
-import styles from './style';
+import {
+  View,
+  SafeAreaView,
+  FlatList,
+  ActivityIndicator,
+  StyleSheet,
+} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import PostsRedux from './reducer_actions';
 import PostsRenderItem from './components/PostsRenderItem';
-import {Headers, TextInputView} from '../../components/';
+import {Headers, TextInputView} from '../../components';
 import I18n from '../../I18n';
 import Loader from '../../components/loaders/loader';
+import {Colors, smartScale} from '../../theme';
+import {getPosts, resetError} from '../../modules/auth/actions';
+import {Alert} from 'react-native';
 
 interface IProps {
   navigation: any;
@@ -17,39 +24,47 @@ declare global {
   }
 }
 export const Home: React.FC<IProps> = props => {
-  const [isLoading, setLoading] = useState(true);
-  const [posts, setPosts] = useState([]);
+  // const [isLoading, setLoading] = useState(false);
+  //const [posts, setPosts] = useState([]);
+
+  const {posts, error, loading} = useSelector((state: any) => ({
+    posts: state.auth.posts,
+    error: state.auth.error,
+    loading: state.auth.loading,
+  }));
+
+  const [isError, setIsError] = useState(error);
   const [fullData, setFullData] = useState([]);
   const [search, setSearch] = useState('');
   const searchRef = useRef(null);
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch(); // useDispatch is work same like mapDispatchToProps method for dispatching event To redux
-  const state = useSelector((state: any) => {
-    // useSelector is work same like mapStateToProps for getting state variable from redux
-    return {
-      postsDataRes: state.posts.postsDataRes,
-      postsResError: state.posts.postsResError,
-    };
-  });
-
-  const fetchPostsList = () => {
-    dispatch(PostsRedux.postsRequest());
-  };
   //use effect perform side effect in functional component
-  // use effect is a replacement of componentDidMount,componentDidUpadte and componentWillUnMount method of class
+  //use effect is a replacement of componentDidMount,componentDidUpadte and componentWillUnMount method of class
+
   useEffect(() => {
-    setLoading(true);
-    fetchPostsList();
+    dispatch(getPosts());
   }, []);
+
   useEffect(() => {
-    if (state.postsDataRes != null) {
-      setLoading(false);
-      setPosts(state.postsDataRes);
-      setFullData(state.postsDataRes);
-    } else if (state.postsResError != null) {
-      setLoading(false);
+    console.log('error::::::', error);
+    if (error != null) {
+      Alert.alert('Error', error, [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {
+          text: 'OK',
+          onPress: () => {
+            dispatch(resetError());
+          },
+        },
+      ]);
     }
-  }, [state]);
+  }, [error]);
+
   //Search view--Done't remove code
   // const onSearchTextChange = (value: string) => {
   //   let text = value.toLowerCase();
@@ -111,8 +126,35 @@ export const Home: React.FC<IProps> = props => {
           />
         </View>
       </View>
-      <Loader loading={isLoading} />
+      <Loader loading={loading} />
       <SafeAreaView style={styles.safeAreaBottomeContainer} />
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: Colors.white,
+  },
+  safeAreaContainer: {
+    flex: 1,
+    backgroundColor: Colors.green,
+  },
+  safeAreaBottomeContainer: {
+    flex: 0,
+    backgroundColor: Colors.white,
+  },
+  indicatorContainer: {flex: 1, alignItems: 'center', justifyContent: 'center'},
+  postListContainer: {flex: 1, margin: smartScale(10)},
+  textInputContainerStyle: {
+    borderRadius: smartScale(10),
+    borderColor: Colors.grey,
+    borderWidth: 1,
+  },
+  iconStyle: {
+    marginLeft: smartScale(5),
+    color: Colors.grey,
+    marginRight: smartScale(5),
+  },
+});
