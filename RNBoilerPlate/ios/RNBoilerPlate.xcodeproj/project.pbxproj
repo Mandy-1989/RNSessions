@@ -40,16 +40,17 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNBoilerPlate/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNBoilerPlate/main.m; sourceTree = "<group>"; };
 		1A5E24768DB6E2737ED13B6B /* libPods-RNBoilerPlate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBoilerPlate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EF471A4CEA7408482025399 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		2366CB3CF7C44CA7975D9D21 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		1EF471A4CEA7408482025399 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		2366CB3CF7C44CA7975D9D21 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		48D90066DC1A54594B7DA883 /* libPods-RNBoilerPlate-RNBoilerPlateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBoilerPlate-RNBoilerPlateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		554EA81306D60D8DC46B84A9 /* Pods-RNBoilerPlate-RNBoilerPlateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerPlate-RNBoilerPlateTests.debug.xcconfig"; path = "Target Support Files/Pods-RNBoilerPlate-RNBoilerPlateTests/Pods-RNBoilerPlate-RNBoilerPlateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNBoilerPlate/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B309DC02F5007BBEAD927155 /* Pods-RNBoilerPlate-RNBoilerPlateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerPlate-RNBoilerPlateTests.release.xcconfig"; path = "Target Support Files/Pods-RNBoilerPlate-RNBoilerPlateTests/Pods-RNBoilerPlate-RNBoilerPlateTests.release.xcconfig"; sourceTree = "<group>"; };
 		DAD2BF65BFA716BEBB1883A9 /* Pods-RNBoilerPlate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerPlate.debug.xcconfig"; path = "Target Support Files/Pods-RNBoilerPlate/Pods-RNBoilerPlate.debug.xcconfig"; sourceTree = "<group>"; };
+		DBB0FAB626A182000009CE47 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F08962DD54F5CCB8F32FADD3 /* Pods-RNBoilerPlate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBoilerPlate.release.xcconfig"; path = "Target Support Files/Pods-RNBoilerPlate/Pods-RNBoilerPlate.release.xcconfig"; sourceTree = "<group>"; };
-		FBBECCFAB0D649088032D3F9 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FBBECCFAB0D649088032D3F9 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				DBB0FAB626A182000009CE47 /* Config.xcconfig */,
 			);
 			name = RNBoilerPlate;
 			sourceTree = "<group>";
@@ -131,7 +133,6 @@
 				2366CB3CF7C44CA7975D9D21 /* Poppins-SemiBold.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -508,6 +509,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"FB_SONARKIT_ENABLED=1",
+					"PROJECT_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
+				);
 				INFOPLIST_FILE = RNBoilerPlate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,6 +543,11 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"PROJECT_DIR=@\\\"\"$PROJECT_DIR\"\\\"",
+				);
 				INFOPLIST_FILE = RNBoilerPlate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +568,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBB0FAB626A182000009CE47 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -621,6 +634,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBB0FAB626A182000009CE47 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;

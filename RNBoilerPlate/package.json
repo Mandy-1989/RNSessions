@@ -19,7 +19,11 @@
     "lint": "eslint .",
     "android:clean": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "android:release": "./gradlew :app:assembleRelease",
-    "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease"
+    "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
+    "staging-release":"cd android && ENVFILE=.env.staging ./gradlew assembleRelease",
+    "production-release":" cd android && ENVFILE=.env.production ./gradlew assembleRelease",
+    "staging-android":"ENVFILE=.env.staging react-native run-android",
+    "production-android":"ENVFILE=.env.production react-native run-android"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
